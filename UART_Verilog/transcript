@@ -1,0 +1,47 @@
+# Reading pref.tcl
+# OpenFile D:/UART/Baud_Gen.v
+project open D:/UART/UART
+# Loading project UART
+# Compile of Rx.v was successful.
+# Compile of Rx_tb.v was successful.
+# Compile of Baud_Gen.v was successful.
+# Compile of Baud_tb.v was successful.
+# Compile of Tx.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Rx.v was successful.
+# Compile of Rx_tb.v was successful.
+# Compile of Baud_Gen.v was successful.
+# Compile of Baud_tb.v was successful.
+# Compile of Tx.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of Rx.v was successful.
+# Compile of Rx_tb.v was successful.
+# Compile of Baud_Gen.v was successful.
+# Compile of Baud_tb.v was successful.
+# Compile of Tx.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.Rx_tb
+# vsim -gui work.Rx_tb 
+# Start time: 03:35:16 on Sep 06,2025
+# Loading work.Rx_tb
+# Loading work.Rx
+add wave -position insertpoint  \
+sim:/Rx_tb/tx_clkperiod \
+sim:/Rx_tb/clk \
+sim:/Rx_tb/reset \
+sim:/Rx_tb/enable \
+sim:/Rx_tb/in_bit \
+sim:/Rx_tb/out_reg \
+sim:/Rx_tb/busy \
+sim:/Rx_tb/error
+add wave -position end sim:/Rx_tb/rx/*
+run
+run
+run
+run
+run
+run -all
+# Compile of Baud_Gen.v was successful.
+# Compile of top.v was successful.
+# End time: 03:59:17 on Sep 06,2025, Elapsed time: 0:24:01
+# Errors: 0, Warnings: 9

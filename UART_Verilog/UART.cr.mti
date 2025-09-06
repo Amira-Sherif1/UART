@@ -1,0 +1,36 @@
+D:/UART/Tx.v {1 {vlog -work work -stats=none D:/UART/Tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Tx
+
+Top level modules:
+	Tx
+
+} {} {}} D:/UART/Baud_Gen.v {1 {vlog -work work -stats=none D:/UART/Baud_Gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Baud_Gen
+
+Top level modules:
+	Baud_Gen
+
+} {} {}} D:/UART/Rx.v {1 {vlog -work work -stats=none D:/UART/RX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Rx
+
+Top level modules:
+	Rx
+
+} {} {}} D:/UART/Rx_tb.v {1 {vlog -work work -stats=none D:/UART/Rx_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Rx_tb
+
+Top level modules:
+	Rx_tb
+
+} {} {}} D:/UART/top.v {1 {vlog -work work -stats=none D:/UART/top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}}

@@ -1,0 +1,143 @@
+module Rx (
+input clk ,
+input reset,
+input enable ,
+input in_bit,
+output reg [7:0] out_reg, 
+output reg busy ,
+output reg error
+); 
+
+reg [1:0] state ;
+reg [2:0] boud_counter ; 
+reg [2:0] bit_counter ;
+reg [7:0] data_reg ; 
+
+parameter Idle  = 2'b00 ;
+parameter Start = 2'b01 ; 
+parameter Data  = 2'b10 ; 
+parameter Stop  = 2'b11 ;
+
+
+
+always @(posedge clk or posedge reset) begin
+
+if(reset) begin
+	state <= Idle ;
+	data_reg <=0 ;
+	busy <= 0 ;
+	error <= 0 ;
+	boud_counter <=0 ; 
+	bit_counter <= 0 ;
+	out_reg <= 0 ;
+end
+else begin 
+case(state)
+     Idle : begin 
+	if(enable && in_bit == 0 ) begin 
+		state <= Start ;
+		busy <= 1 ;
+		error <= 0 ;
+		data_reg <=0 ;
+		boud_counter <= boud_counter + 1 ; 
+		bit_counter <= 0 ;end
+ 	else begin
+		state <= Idle ;
+	        data_reg <=0 ;
+		busy <= 0 ;
+		error <= 0 ;
+		boud_counter <=0 ; 
+		bit_counter <= 0 ;
+	end
+     end
+     Start: begin
+           if(enable) begin
+		if(boud_counter == 3 ) begin
+			state <= Data ;
+			busy <= 1 ;
+			error <= 0 ;
+			boud_counter <= 0 ; 
+			bit_counter <= 0 ;end
+		else
+			boud_counter <= boud_counter + 1 ;	
+	   end
+           else begin
+		state <= Idle ;
+	        data_reg <=0 ;
+		busy <= 0 ;
+		error <= 1 ;
+		boud_counter <=0 ; 
+		bit_counter <= 0 ;
+		out_reg <= 0 ;end
+     end
+	Data:  begin
+ 	    if(enable) begin
+		if (bit_counter == 7) begin
+		     if(boud_counter == 7 ) begin
+			state <= Stop ;
+			busy <= 1 ;
+			error <= 0 ;
+			boud_counter <= 0 ; 
+			bit_counter <= 0  ;
+			data_reg[bit_counter] <= in_bit  ;end
+		      else
+			boud_counter <= boud_counter + 1 ;	
+		end
+		else begin // bit counetr < 7  
+		    if(boud_counter == 7 ) begin
+			state <= Data ;
+			busy <= 1 ;
+			error <= 0 ;
+			boud_counter <= 0 ; 
+			bit_counter <= bit_counter +1 ;
+			data_reg[bit_counter] <= in_bit  ;end
+		else
+			boud_counter <= boud_counter + 1 ;	
+		end
+	    end
+	    else begin
+		state <= Idle ;
+	        data_reg <=0 ;
+		busy <= 0 ;
+		error <= 1 ;
+		boud_counter <=0 ; 
+		bit_counter <= 0 ;
+		out_reg <= 0 ;end		
+         end
+	Stop: begin
+	     if(enable) begin
+		if (boud_counter == 7 ) begin
+		   if(in_bit == 1) begin
+			state <= Idle ;
+		 	out_reg <= data_reg ;
+		 	error <= 0 ;
+		 	busy <= 0 ;
+			boud_counter <= 0 ;
+			bit_counter <= 0 ; end
+		   else begin   // no stop bit 
+			state <= Idle ;
+		 	out_reg <= 0 ;
+		 	error <= 1 ;
+		 	busy <= 0 ;
+			boud_counter <= 0 ;
+			bit_counter <= 0 ; end
+		   end
+		else   // boud counter < 7 
+		   boud_counter <= boud_counter + 1 ;	
+	     end
+	     else begin   // no enable 
+		state <= Idle ;
+	        data_reg <=0 ;
+		busy <= 0 ;
+		error <= 1 ;
+		boud_counter <=0 ; 
+		bit_counter <= 0 ;
+		out_reg <= 0 ;end		
+             	
+	end
+
+endcase 
+
+end
+end
+endmodule

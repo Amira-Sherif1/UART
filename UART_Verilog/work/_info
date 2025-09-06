@@ -1,0 +1,225 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/SetUps
+vBaud_Gen
+Z0 !s110 1757123045
+!i10b 1
+!s100 =A=e5FB7<oDP5EQ^DgNjj3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6Z^I]>QA?NX`4VBV]ZlP11
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/UART
+w1757122789
+8D:/UART/Baud_Gen.v
+FD:/UART/Baud_Gen.v
+!i122 91
+L0 1 59
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1757123045.000000
+!s107 D:/UART/Baud_Gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/Baud_Gen.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@baud_@gen
+vBaud_tb
+Z8 !s110 1757107694
+!i10b 1
+!s100 Sz28ilCUna9U_aBDknTD=3
+R1
+I3PLVQG`2GFT_b7?]oY?Nh1
+R2
+R3
+w1757097820
+8C:/Users/asus/Downloads/UART/UART/Baud_tb.v
+FC:/Users/asus/Downloads/UART/UART/Baud_tb.v
+!i122 8
+L0 3 38
+R4
+r1
+!s85 0
+31
+Z9 !s108 1757107694.000000
+!s107 C:/Users/asus/Downloads/UART/UART/Baud_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/asus/Downloads/UART/UART/Baud_tb.v|
+!i113 1
+R6
+R7
+n@baud_tb
+vRx
+R0
+!i10b 1
+!s100 _mNDUn^TL73>jcFmo8EU`2
+R1
+IEGB`0e[1oElJbgg?_6SB10
+R2
+R3
+w1757122836
+8D:/UART/RX.v
+FD:/UART/RX.v
+!i122 89
+L0 1 143
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/UART/RX.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/RX.v|
+!i113 1
+R6
+R7
+n@rx
+vRx_tb
+R0
+!i10b 1
+!s100 GnEGWM?JIYOAHSE2OP1zd2
+R1
+I]i^[=Sm>E:^gi@3QM]z_b3
+R2
+R3
+w1757117898
+8D:/UART/Rx_tb.v
+FD:/UART/Rx_tb.v
+!i122 90
+L0 3 77
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/UART/Rx_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/Rx_tb.v|
+!i113 1
+R6
+R7
+n@rx_tb
+vtb_top
+!s110 1757121663
+!i10b 1
+!s100 oR5o7RFPa1iQSFz3?]02?2
+R1
+If7T>cW4130GnKjzj<ZN<03
+R2
+R3
+w1757121107
+Z10 8D:/UART/UART_tb.v
+Z11 FD:/UART/UART_tb.v
+!i122 64
+L0 3 104
+R4
+r1
+!s85 0
+31
+!s108 1757121663.000000
+!s107 D:/UART/UART_tb.v|
+Z12 !s90 -reportprogress|300|-work|work|-stats=none|D:/UART/UART_tb.v|
+!i113 1
+R6
+R7
+vtb_Tx
+R8
+!i10b 1
+!s100 <RNE@cHVWhK<@^bLb3eA73
+R1
+IVS3=NHajgoAVH5K[cZ=z[1
+R2
+R3
+w1757097821
+8C:/Users/asus/Downloads/UART/UART/Tx_tb.v
+FC:/Users/asus/Downloads/UART/UART/Tx_tb.v
+!i122 10
+L0 4 100
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/asus/Downloads/UART/UART/Tx_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/asus/Downloads/UART/UART/Tx_tb.v|
+!i113 1
+R6
+R7
+ntb_@tx
+vtop
+R0
+!i10b 1
+!s100 R9coPL;kH3XgT:3R?W2aC2
+R1
+Ijc[f764;Ygi;hNazL@`L31
+R2
+R3
+w1757120275
+8D:/UART/top.v
+FD:/UART/top.v
+!i122 93
+L0 1 51
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/UART/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/top.v|
+!i113 1
+R6
+R7
+vTx
+R0
+!i10b 1
+!s100 <a1=[F@e<CJYC<hW;m=`Z0
+R1
+IjXA`0<7Rjf@dGi3]d9o8R2
+R2
+R3
+w1757118898
+8D:/UART/Tx.v
+FD:/UART/Tx.v
+!i122 92
+L0 1 114
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/UART/Tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/UART/Tx.v|
+!i113 1
+R6
+R7
+n@tx
+vUART_tb
+R0
+!i10b 1
+!s100 5Rk0`E<3:MNH4H9Po[_<92
+R1
+I6oCQC4Rmf_<fH6lc9Qc=m2
+R2
+R3
+w1757123037
+R10
+R11
+!i122 94
+L0 3 110
+R4
+r1
+!s85 0
+31
+R5
+Z13 !s107 D:/UART/UART_tb.v|
+R12
+!i113 1
+R6
+R7
+n@u@a@r@t_tb
